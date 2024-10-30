@@ -5,7 +5,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from queue import Queue
 from RAG_module import setup_openai_key, load_and_process_local_documents, setup_retriever_and_qa, get_rag_answer
-from GRAPHRAG_module import get_graph_answer
+from graphRAG_module import get_graph_answer
 
 # Global task queue and conditions
 task_queue = Queue()
@@ -17,7 +17,6 @@ results = {}
 #retriever, prompt, primary_qa_llm = setup_retriever_and_qa(documents, language="es")
 
 
-# Worker function to process tasks from the queue
 def worker():
     while True:
         task = task_queue.get()
@@ -31,7 +30,7 @@ def worker():
             elif task_type == "graphrag":
                 answer = get_graph_answer(question)
             elif task_type == "combined":
-                answer = get_combined_answer(question)  # Run combined answer function
+                answer = get_combined_answer(question)  
             else:
                 answer = "Invalid task type"
             
@@ -43,33 +42,27 @@ def worker():
         finally:
             task_queue.task_done()
 
-# Start worker thread
 worker_thread = threading.Thread(target=worker, daemon=True)
 worker_thread.start()
 
-# Function to get combined answer from RAG and GRAPHRAG in parallel
 def get_combined_answer(question):
     rag_result = [None]
     graphrag_result = [None]
 
-    # Define the parallel task functions
     def fetch_rag():
         rag_result[0] = get_rag_answer(question)
 
     def fetch_graphrag():
         graphrag_result[0] = get_graph_answer(question)
 
-    # Start threads for each query
     rag_thread = threading.Thread(target=fetch_rag)
     graphrag_thread = threading.Thread(target=fetch_graphrag)
     rag_thread.start()
     graphrag_thread.start()
 
-    # Wait for both threads to complete
     rag_thread.join()
     graphrag_thread.join()
 
-    # Return combined answer
     return f"RAG Answer: {rag_result[0]}\nGraphRAG Answer: {graphrag_result[0]}"
 
 # Initialize Flask app
