@@ -2,13 +2,11 @@ import requests
 import json
 import sys
 
-# Define the base URL for the server
 BASE_URL = "http://127.0.0.1:8000"
 
 # Test data
 test_question = "What are the key elements of a video game environment?"
 
-# Functions for each endpoint
 def test_rag_query():
     print("Testing /rag_query endpoint...")
     payload = {"question": test_question}
@@ -66,14 +64,12 @@ def test_shutdown():
         print("Shutdown Test Failed.")
         print("Error:", response.json().get("error", response.text))
 
-# Main function to execute based on argument
+
 if __name__ == "__main__":
-    # Check if an endpoint argument was provided
     if len(sys.argv) < 2:
         print("Usage: python test_script.py [rag|graph|combined|get_key|shutdown]")
         sys.exit(1)
     
-    # Map argument to the correct test function
     option = sys.argv[1].lower()
     
     if option == "rag":
