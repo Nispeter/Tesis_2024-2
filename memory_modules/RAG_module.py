@@ -1,5 +1,7 @@
+from datetime import datetime
 import os
 import json
+from dotenv import load_dotenv
 import fitz
 import time
 from pathlib import Path
@@ -12,28 +14,33 @@ from langchain_core.runnables import RunnablePassthrough
 from operator import itemgetter
 from RAG_prompts import en_prompts, es_prompts
 
+session_log_file = ""
+load_dotenv()
+
 # Load OpenAI API key
 def setup_openai_key():
     api_key = os.getenv("OPENAI_API_KEY")
     if not api_key:
-        auth_path = os.path.expanduser("~/.openai/auth.json")
-        if os.path.exists(auth_path):
-            with open(auth_path, 'r') as file:
-                data = json.load(file)
-                api_key = data.get('api_key')
-                if api_key:
-                    os.environ["OPENAI_API_KEY"] = api_key
+        raise ValueError("OpenAI API key is not set in the .env file")
+    os.environ["OPENAI_API_KEY"] = api_key
 
 # Load and split documents from a URL
 def load_and_process_documents(url):
+    session_log_file = get_session_log_filename()
     loader = WebBaseLoader(url)
     documents = loader.load()
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=700, chunk_overlap=50)
     return text_splitter.split_documents(documents)
 
-# Load and split local PDF documents
 def load_and_process_local_documents(filepath):
-    text = load_pdf_documents(filepath)
+    session_log_file = get_session_log_filename()
+    if filepath.lower().endswith('.pdf'):
+        text = load_pdf_documents(filepath)
+    elif filepath.lower().endswith('.txt'):
+        with open(filepath, 'r', encoding='utf-8') as file:
+            text = file.read()
+    else:
+        raise ValueError("Unsupported file format. Only PDF and TXT files are supported.")
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=700, chunk_overlap=50)
     return text_splitter.create_documents([text])
 
@@ -42,6 +49,22 @@ def load_pdf_documents(filepath):
     with fitz.open(filepath) as doc:
         texts = [page.get_text() for page in doc]
     return "\n".join(texts)
+
+
+def get_session_log_filename():
+    session_id = datetime.now().strftime("%Y%m%d_%H%M%S")  # Format: YYYYMMDD_HHMMSS
+    return f"log_incremental_iterator_{session_id}.txt"
+
+def add_new_data_to_kb(new_data, vector_store, embeddings_model, chunk_size=700, chunk_overlap=50):
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
+    documents = text_splitter.create_documents(new_data)
+    new_embeddings = embeddings_model.embed_documents([doc.content for doc in documents])
+    
+    vector_store.add_documents(documents, new_embeddings)
+    with open(session_log_file, "a", encoding="utf-8") as log_file:
+        for doc in documents:
+            log_file.write(doc.content + "\n")
+            log_file.write("=" * 40 + "\n") 
 
 # Setup retriever and QA components
 def setup_retriever_and_qa(documents, language="es"):
@@ -64,7 +87,6 @@ def get_rag_answer(question, retriever, prompt, primary_qa_llm):
     )
     result = retrieval_augmented_qa_chain.invoke({"question": question})
     return result["response"].content
-    return "content retreived!"
 
 def get_rag_answer(question):
     time.sleep(10)

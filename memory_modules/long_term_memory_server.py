@@ -4,18 +4,13 @@ import os
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from queue import Queue
-from RAG_module import setup_openai_key, load_and_process_local_documents, setup_retriever_and_qa, get_rag_answer
+from RAG_module import get_session_log_filename, setup_openai_key, load_and_process_local_documents, setup_retriever_and_qa, get_rag_answer
 from graphRAG_module import get_graph_answer
 
 # Global task queue and conditions
 task_queue = Queue()
 task_condition = threading.Condition()
 results = {}
-
-#setup_openai_key()
-#documents = load_and_process_local_documents("ragtest/input/book.txt") 
-#retriever, prompt, primary_qa_llm = setup_retriever_and_qa(documents, language="es")
-
 
 def worker():
     while True:
@@ -128,4 +123,7 @@ def get_api_key():
     return jsonify({"api_key": api_key})
 
 if __name__ == '__main__':
+    setup_openai_key()
+    documents = load_and_process_local_documents(r"../ragtest/input/book.txt")
+    retriever, prompt, primary_qa_llm = setup_retriever_and_qa(documents)
     app.run(debug=True, port=8000)
