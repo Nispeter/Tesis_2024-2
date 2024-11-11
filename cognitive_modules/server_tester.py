@@ -22,20 +22,38 @@ def test_emotion_classification(question):
     except Exception as e:
         print(f"Error while testing server: {e}")
 
+import asyncio
+from emotional_module import classify_emotion
+
+async def main():
+    question = "I'm feeling so excited about this new project!"
+    emotion = await classify_emotion(question)
+    print("Detected emotion:", emotion)
+
+# Running the main function if this is the entry point
 if __name__ == "__main__":
+    asyncio.run(main())
+
+
+# if __name__ == "__main__":
     
-    test_questions = [
-        "sup?",
-        # "I don't really know how to proceed, could you help me?",
-        "I can’t wait for the concert next week! I’ve been looking forward to it for months.",
-        "I just got promoted at work! I’m so thrilled and grateful for this opportunity!",
-        "I know I can rely on you to keep this secret. You've always been there for me.",
-        "I’m really nervous about this exam. I keep thinking about all the things that could go wrong.",
-        "I didn’t expect to see you here! What a pleasant surprise!",
-        "I’ve been feeling down since my friend moved away. It’s hard not having them around.",
-        "I can’t believe people actually eat that. Just the smell alone makes me feel sick.",
-        "I’m so frustrated with the way they handled this situation. They completely ignored our concerns!"
-        ]
+    # test_questions = [
+    #     "sup?",
+    #     # "I don't really know how to proceed, could you help me?",
+    #     "I can’t wait for the concert next week! I’ve been looking forward to it for months.",
+    #     "I just got promoted at work! I’m so thrilled and grateful for this opportunity!",
+    #     "I know I can rely on you to keep this secret. You've always been there for me.",
+    #     "I’m really nervous about this exam. I keep thinking about all the things that could go wrong.",
+    #     "I didn’t expect to see you here! What a pleasant surprise!",
+    #     "I’ve been feeling down since my friend moved away. It’s hard not having them around.",
+    #     "I can’t believe people actually eat that. Just the smell alone makes me feel sick.",
+    #     "I’m so frustrated with the way they handled this situation. They completely ignored our concerns!"
+    #     ]
     
-    for question in test_questions:
-        test_emotion_classification(question)
+    # for question in test_questions:
+    #     test_emotion_classification(question)
+
+
+
+
+

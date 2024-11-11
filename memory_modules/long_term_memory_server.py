@@ -4,7 +4,7 @@ import os
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from queue import Queue
-from RAG_module import get_session_log_filename, setup_openai_key, load_and_process_local_documents, setup_retriever_and_qa, get_rag_answer
+from RAG_module import add_new_data_to_kb, get_session_log_filename, setup_openai_key, load_and_process_local_documents, setup_retriever_and_qa, get_rag_answer
 from graphRAG_module import get_graph_answer
 
 # Global task queue and conditions
@@ -21,7 +21,7 @@ def worker():
         try:
             if task_type == "rag":
                 #answer = get_rag_answer(question, retriever, prompt, primary_qa_llm)
-                answer = get_rag_answer(question)
+                answer = get_rag_answer(question, retriever, primary_qa_llm)
             elif task_type == "graphrag":
                 answer = get_graph_answer(question)
             elif task_type == "combined":
@@ -114,6 +114,20 @@ def shutdown():
     task_queue.put(None)
     worker_thread.join()
     return jsonify({'status': 'Server shutting down...'}), 200
+
+@app.route('/add_data', methods=['POST'])
+def add_data():
+    content = request.get_json()
+    new_data = content.get('data')
+    if not new_data or not isinstance(new_data, list):
+        return jsonify({"error": "No data provided or data is not a list"}), 400
+
+    try:
+        add_new_data_to_kb(new_data)
+        return jsonify({"status": "Data added successfully"}), 200
+    except Exception as e:
+        print(f"Error adding new data: {e}")
+        return jsonify({"error": "Failed to add data"}), 500
 
 @app.route('/get_key', methods=['GET'])
 def get_api_key():

@@ -18,3 +18,5 @@ cryptography
 celery
 redis
 requests
+asyncio
+sentence_transformers

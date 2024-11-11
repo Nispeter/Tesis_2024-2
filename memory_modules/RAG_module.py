@@ -16,6 +16,8 @@ from RAG_prompts import en_prompts, es_prompts
 
 session_log_file = ""
 load_dotenv()
+embeddings = OpenAIEmbeddings(model="text-embedding-ada-002")
+vector_store = FAISS.from_documents()
 
 # Load OpenAI API key
 def setup_openai_key():
@@ -55,10 +57,10 @@ def get_session_log_filename():
     session_id = datetime.now().strftime("%Y%m%d_%H%M%S")  # Format: YYYYMMDD_HHMMSS
     return f"log_incremental_iterator_{session_id}.txt"
 
-def add_new_data_to_kb(new_data, vector_store, embeddings_model, chunk_size=700, chunk_overlap=50):
+def add_new_data_to_kb(new_data, chunk_size=700, chunk_overlap=50):
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
     documents = text_splitter.create_documents(new_data)
-    new_embeddings = embeddings_model.embed_documents([doc.content for doc in documents])
+    new_embeddings = embeddings.embed_documents([doc.content for doc in documents])
     
     vector_store.add_documents(documents, new_embeddings)
     with open(session_log_file, "a", encoding="utf-8") as log_file:
@@ -68,7 +70,6 @@ def add_new_data_to_kb(new_data, vector_store, embeddings_model, chunk_size=700,
 
 # Setup retriever and QA components
 def setup_retriever_and_qa(documents, language="es"):
-    embeddings = OpenAIEmbeddings(model="text-embedding-ada-002")
     vector_store = FAISS.from_documents(documents, embeddings)
     retriever = vector_store.as_retriever()
     
