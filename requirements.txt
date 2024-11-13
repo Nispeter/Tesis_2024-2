@@ -20,3 +20,4 @@ redis
 requests
 asyncio
 sentence_transformers
+groq

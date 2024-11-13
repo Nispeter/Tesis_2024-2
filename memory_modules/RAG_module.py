@@ -12,7 +12,7 @@ from langchain_community.vectorstores import FAISS
 from langchain.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnablePassthrough
 from operator import itemgetter
-from RAG_prompts import en_prompts, es_prompts
+from utils.prompts import RAG_prompts
 
 session_log_file = ""
 load_dotenv()
@@ -73,7 +73,7 @@ def setup_retriever_and_qa(documents, language="es"):
     vector_store = FAISS.from_documents(documents, embeddings)
     retriever = vector_store.as_retriever()
     
-    prompt_template = en_prompts["context_query"] if language == "en" else es_prompts["context_query"]
+    prompt_template = RAG_prompts["context_query"] 
     prompt = ChatPromptTemplate.from_template(prompt_template)
     
     primary_qa_llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0)
