@@ -14,6 +14,11 @@ RAG_prompts = {
 }
 emotional_prompts = {
     "classification_query":
-        "Classify the emotion of the following dialogue and return only the word of the category without any other text. "
-        "Categories: anticipation, joy, trust, fear, surprise, sadness, disgust, anger, none. "
+        "Following the emotions: anticipation, joy, trust, fear, surprise, sadness, disgust, anger, none. "
+        "Classify the emotion of the following dialogue and return only the word of the category without any other text: "
+}
+
+self_monitor_prompts = {
+    "generate_summary":
+        "Generate a new summary based on this information, maintaining continuity with previous summary."
 }

@@ -19,9 +19,7 @@ class LLMCaller:
                 raise ValueError("Missing OpenAI API key in .env file.")
             openai.api_key = self.api_key
         elif self.service == "ollama":
-            self.api_key = os.getenv("OLLAMA_API_KEY")
-            if not self.api_key:
-                raise ValueError("Missing Ollama API key in .env file.")
+            pass
         elif self.service == "groq":
             self.api_key = os.getenv("GROQ_API_KEY")
             if not self.api_key:
@@ -84,6 +82,6 @@ class LLMCaller:
             return "Error: Unable to generate text with Groq."
 
 
-model = LLMCaller(service="groq", model_name="llama-3.1-8b-instant")
-result = model.generate_text("What is the capital of France?")
-print(result)
+# model = LLMCaller(service="groq", model_name="llama-3.1-8b-instant")
+# result = model.generate_text("What is the capital of France?")
+# print(result)
