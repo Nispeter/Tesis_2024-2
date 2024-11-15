@@ -7,7 +7,8 @@ class SelfMonitor:
         self.previous_summary = previous_summary
         self.internal_state = internal_state
         self.llm_client = LLMCaller(service="groq", model_name="llama-3.1-8b-instant")
-
+        print("Self Monitor initialized")
+        
     def update_summary(self, internal_state):
         """Updates the summary using the provided InternalState object."""
         self.internal_state = internal_state
@@ -41,7 +42,7 @@ internal_state = InternalState(
     schedule="Meeting at 3 PM, complete report by 5 PM"
 )
   
-self_monitor = SelfMonitor(previous_summary="Initial summary", internal_state=internal_state)
-self_monitor.update_summary(internal_state)
+# self_monitor = SelfMonitor(previous_summary="Initial summary", internal_state=internal_state)
+# self_monitor.update_summary(internal_state)
 
-print(self_monitor.previous_summary)
+# print(self_monitor.previous_summary)

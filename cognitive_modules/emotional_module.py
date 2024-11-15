@@ -18,6 +18,7 @@ class EmotionalModule:
 
     def __init__(self):
         self.llm_client = LLMCaller(service="ollama", model_name="llama3.2:3b")
+        print("Emotional Module initialized")
         
     def classify_emotion(self, question):
         """

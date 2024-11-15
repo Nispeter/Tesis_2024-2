@@ -14,10 +14,10 @@ from langchain_core.runnables import RunnablePassthrough
 from operator import itemgetter
 from utils.prompts import RAG_prompts
 
-session_log_file = ""
+
 load_dotenv()
 embeddings = OpenAIEmbeddings(model="text-embedding-ada-002")
-vector_store = FAISS.from_documents()
+vector_store = None
 
 # Load OpenAI API key
 def setup_openai_key():
@@ -28,14 +28,12 @@ def setup_openai_key():
 
 # Load and split documents from a URL
 def load_and_process_documents(url):
-    session_log_file = get_session_log_filename()
     loader = WebBaseLoader(url)
     documents = loader.load()
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=700, chunk_overlap=50)
     return text_splitter.split_documents(documents)
 
 def load_and_process_local_documents(filepath):
-    session_log_file = get_session_log_filename()
     if filepath.lower().endswith('.pdf'):
         text = load_pdf_documents(filepath)
     elif filepath.lower().endswith('.txt'):
@@ -57,30 +55,34 @@ def get_session_log_filename():
     session_id = datetime.now().strftime("%Y%m%d_%H%M%S")  # Format: YYYYMMDD_HHMMSS
     return f"log_incremental_iterator_{session_id}.txt"
 
+session_log_file = get_session_log_filename()
+
 def add_new_data_to_kb(new_data, chunk_size=700, chunk_overlap=50):
+    """Add new data to the knowledge base."""
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
     documents = text_splitter.create_documents(new_data)
-    new_embeddings = embeddings.embed_documents([doc.content for doc in documents])
-    
-    vector_store.add_documents(documents, new_embeddings)
+    vector_store.add_documents(documents)
     with open(session_log_file, "a", encoding="utf-8") as log_file:
         for doc in documents:
-            log_file.write(doc.content + "\n")
-            log_file.write("=" * 40 + "\n") 
+            log_file.write(doc.page_content + "\n")
+            log_file.write("=" * 40 + "\n")  
 
-# Setup retriever and QA components
-def setup_retriever_and_qa(documents, language="es"):
+def setup_retriever_and_qa(documents):
+    global vector_store 
     vector_store = FAISS.from_documents(documents, embeddings)
-    retriever = vector_store.as_retriever()
+    retriever = vector_store.as_retriever(search_kwargs={"k": 3}) 
     
-    prompt_template = RAG_prompts["context_query"] 
-    prompt = ChatPromptTemplate.from_template(prompt_template)
+    prompt = ChatPromptTemplate.from_template(RAG_prompts["context_query"])
     
     primary_qa_llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0)
     return retriever, prompt, primary_qa_llm
 
+template = RAG_prompts["context_query"]
+prompt = ChatPromptTemplate.from_template(template)
+    
 # Run RAG to get answer to a question
-def get_rag_answer(question, retriever, prompt, primary_qa_llm):
+def get_rag_answer(question, retriever, primary_qa_llm):
+    
     retrieval_augmented_qa_chain = (
         {"context": itemgetter("question") | retriever, "question": itemgetter("question")}
         | RunnablePassthrough.assign(context=itemgetter("context"))
@@ -89,6 +91,6 @@ def get_rag_answer(question, retriever, prompt, primary_qa_llm):
     result = retrieval_augmented_qa_chain.invoke({"question": question})
     return result["response"].content
 
-def get_rag_answer(question):
-    time.sleep(10)
-    return question + " || content retrieved!"
+# def get_rag_answer(question):
+#     time.sleep(10)
+#     return question + " || content retrieved!"

@@ -8,3 +8,4 @@ class InternalState:
         self.knowledge = knowledge
         self.schedule = schedule
         self.self_monitor_summary = "none"
+        print("Internal State initialized")
