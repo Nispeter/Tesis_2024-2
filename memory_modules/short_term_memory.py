@@ -1,17 +1,17 @@
 import numpy as np
-import requests
 from sentence_transformers import SentenceTransformer, util
 import ollama
 
-RAG_SERVER_URL = 'http://localhost:8000'
+from memory_modules.long_term_memory import LongTermMemoryService
 
 class ShortTermMemory:
-    def __init__(self, memory_size=5, forget_threshold=0.75, retrieval_threshold=3):
+    def __init__(self, long_term_memory, memory_size=5, forget_threshold=0.75, retrieval_threshold=3):
         self.memory = []  # List of (text, embedding, retrieval_count) tuples
         self.memory_size = memory_size
         self.forget_threshold = forget_threshold
         self.retrieval_threshold = retrieval_threshold
         self.model = SentenceTransformer('all-MiniLM-L6-v2')
+        self.long_term_memory = long_term_memory
 
     def add_memory(self, text):
         embedding = self.model.encode(text, convert_to_tensor=True)
@@ -60,7 +60,8 @@ class ShortTermMemory:
 
         if frequent_memories:
             summary = self.summarize_memories(frequent_memories)
-            self.long_term_memory_store(summary)
+            print("storing: " + summary)
+            self.long_term_memory.add_data([summary])  # Pass summary as a list
             for memory in self.memory:
                 if memory[0] in frequent_memories:
                     memory[2] = 0
@@ -73,38 +74,31 @@ class ShortTermMemory:
             model='llama3.2:3b',
             messages=[{
                 "role": "user",
-                "content": "Summarize the following memories: " + " ".join(memories)
+                "content": "Summarize at the best of your abilities the following memories without adding new information: " + " ".join(memories)
             }]
         )
         return response['message']['content']
 
-    def long_term_memory_store(summary):
-        """
-        A placeholder function that would send the summarized memories to a long-term storage server.
-        """
-        url = f"{RAG_SERVER_URL}/add_data"
-        payload = {"data":summary}
-        response = requests.post(url, json=payload)
-        if response.status_code == 200:
-            print("Data stored succesfully.")
-            print("Answer:", response.json().get("answer"))
-        else:
-            print("Data storate failed.")
-            print("Error:", response.json().get("error", response.text))
+# # Example usage
+# long_term_memory = LongTermMemoryService()
+# memory_system = ShortTermMemory(long_term_memory)
 
-# Example usage
-memory_system = ShortTermMemory()
+# # Add some example events
+# memory_system.add_memory("User entered the room.")
+# memory_system.add_memory("User asked a question about life")
+# memory_system.add_memory("User left the room.")
+# memory_system.add_memory("User discussed life meaning with a friend.")
+# memory_system.add_memory("User said the meaning of life is 42")
 
-# Add some example events
-memory_system.add_memory("User entered the room.")
-memory_system.add_memory("User asked a question about memory systems.")
-memory_system.add_memory("User left the room.")
-memory_system.add_memory("User discussed memory retention techniques.")
-
-query = "question about memory"
-retrieved_memories = memory_system.retrieve_memories(query, top_k=2)
-retrieved_memories = memory_system.retrieve_memories(query, top_k=2)
-retrieved_memories = memory_system.retrieve_memories(query, top_k=2)
-retrieved_memories = memory_system.retrieve_memories(query, top_k=2)
-retrieved_memories = memory_system.retrieve_memories(query, top_k=2)
-print("Retrieved memories:", retrieved_memories)
+# query = "asking about the meaning of life"
+# print('asking..')
+# retrieved_memories = memory_system.retrieve_memories(query, top_k=2)
+# print("Retrieved memories:", retrieved_memories)
+# retrieved_memories = memory_system.retrieve_memories(query, top_k=2)
+# print("Retrieved memories:", retrieved_memories)
+# retrieved_memories = memory_system.retrieve_memories(query, top_k=2)
+# print("Retrieved memories:", retrieved_memories)
+# retrieved_memories = memory_system.retrieve_memories(query, top_k=2)
+# print("Retrieved memories:", retrieved_memories)
+# retrieved_memories = memory_system.retrieve_memories(query, top_k=2)
+# print("Retrieved memories:", retrieved_memories)

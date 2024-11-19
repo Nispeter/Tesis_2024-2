@@ -34,3 +34,4 @@ build/
 # Ignore other common files
 *.bak
 *.tmp
+log_incremental*

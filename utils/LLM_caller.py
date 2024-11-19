@@ -9,7 +9,7 @@ load_dotenv()
 
 class LLMCaller:
 
-    def __init__(self, service="openai", model_name="openai"):
+    def __init__(self, service="openai", model_name="gpt-4o"):
         self.service = service.lower()
         self.model_name = model_name
         

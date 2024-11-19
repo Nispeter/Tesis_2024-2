@@ -45,18 +45,18 @@ class LongTermMemoryService:
 
 # Usage example
 
-try:
-    service = LongTermMemoryService()
+# try:
+#     service = LongTermMemoryService()
 
-    # Example questions
-    print(service.ask_question("What is the meaning of life for Scrooge?"))
-    print(service.ask_question("Who was Scrooge?"))
+#     # Example questions
+#     print(service.ask_question("What is the meaning of life for Scrooge?"))
+#     print(service.ask_question("Who was Scrooge?"))
 
-    # Adding new data to the knowledge base
-    service.add_data(["The meaning of life for Scrooge was the freedom of the Mapuche people"])
+#     # Adding new data to the knowledge base
+#     service.add_data(["The meaning of life for Scrooge was the freedom of the Mapuche people"])
 
-    # Asking the question again with updated knowledge base
-    print(service.ask_question("What is the meaning of life for Scrooge?"))
+#     # Asking the question again with updated knowledge base
+#     print(service.ask_question("What is the meaning of life for Scrooge?"))
 
-except Exception as e:
-    print(f"An error occurred: {e}")
+# except Exception as e:
+#     print(f"An error occurred: {e}")
