@@ -12,6 +12,7 @@ class ShortTermMemory:
         self.retrieval_threshold = retrieval_threshold
         self.model = SentenceTransformer('all-MiniLM-L6-v2')
         self.long_term_memory = long_term_memory
+        print("Short term memory system initialized")
 
     def add_memory(self, text):
         embedding = self.model.encode(text, convert_to_tensor=True)

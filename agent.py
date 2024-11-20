@@ -6,10 +6,10 @@ from memory_modules.memory_manager import MemoryManager
 
 class Agent:
     def __init__(self): 
-        self.memory_manager = MemoryManager()
+        #self.memory_manager = MemoryManager()
         self.speaking_policy_manager = SpeakingPolicyManager()
-        self.self_monitor = SelfMonitor()
-        self.internal_state = InternalState()
+        #self.self_monitor = SelfMonitor()
+        #self.internal_state = InternalState()
         
     def talk(self,quiestion):
         response = self.generate_response(question)

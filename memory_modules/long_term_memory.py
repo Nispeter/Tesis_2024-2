@@ -11,6 +11,7 @@ from memory_modules.RAG_module import (
 class LongTermMemoryService:
     def __init__(self):
         self.retriever, self.prompt, self.primary_qa_llm = self.initialize_system()
+        print("Long term memory system initialized")
 
     def initialize_system(self):
         setup_openai_key()
