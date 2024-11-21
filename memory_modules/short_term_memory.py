@@ -2,8 +2,6 @@ import numpy as np
 from sentence_transformers import SentenceTransformer, util
 import ollama
 
-from memory_modules.long_term_memory import LongTermMemoryService
-
 class ShortTermMemory:
     def __init__(self, long_term_memory, memory_size=5, forget_threshold=0.75, retrieval_threshold=3):
         self.memory = []  # List of (text, embedding, retrieval_count) tuples

@@ -7,8 +7,7 @@ from memory_modules.RAG_module import (
     get_rag_answer
 )
 
-
-class LongTermMemoryService:
+class LongTermMemory:
     def __init__(self):
         self.retriever, self.prompt, self.primary_qa_llm = self.initialize_system()
         print("Long term memory system initialized")
@@ -18,9 +17,10 @@ class LongTermMemoryService:
         documents = load_and_process_local_documents(r"ragtest/input/book.txt")
         return setup_retriever_and_qa(documents)
 
-    def ask_question(self, question):
+    def retrieve_memories(self, question):
         """Process a single RAG question and return the answer."""
         try:
+            print("rag_question: " + question)
             return get_rag_answer(question, self.retriever, self.primary_qa_llm)
         except Exception as e:
             print(f"Error processing question: {e}")
@@ -50,8 +50,8 @@ class LongTermMemoryService:
 #     service = LongTermMemoryService()
 
 #     # Example questions
-#     print(service.ask_question("What is the meaning of life for Scrooge?"))
-#     print(service.ask_question("Who was Scrooge?"))
+#     print(service.retrieve_memories("What is the meaning of life for Scrooge?"))
+#     print(service.retrieve_memories("Who was Scrooge?"))
 
 #     # Adding new data to the knowledge base
 #     service.add_data(["The meaning of life for Scrooge was the freedom of the Mapuche people"])

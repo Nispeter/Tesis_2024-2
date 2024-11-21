@@ -22,3 +22,8 @@ self_monitor_prompts = {
     "generate_summary":
         "Generate a new summary based on this information, maintaining continuity with previous summary."
 }
+
+character_name = ""
+long_term_memory_prompts = {
+    "get_character": f"Include their background, appearance, personality traits, motivations, relationships, skills, and role in the narrative. Ensure the description is rich and engaging, consolidating all relevant details into a single paragraph. Focus on accuracy and context while maintaining a natural flow."
+}
