@@ -85,3 +85,9 @@ class LLMCaller:
 # model = LLMCaller(service="groq", model_name="llama-3.1-8b-instant")
 # result = model.generate_text("What is the capital of France?")
 # print(result)
+
+#TODO
+#NOTE
+#HACK
+#FIXME
+#BUG

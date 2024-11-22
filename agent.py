@@ -13,11 +13,10 @@ class Agent:
             schedule=schedule,
             retrieved_memories=""
         )
-        self.memory_manager = MemoryManager(self.internal_state)
-        # Uncomment the modules if you intend to use them later
-        # self.self_monitor = SelfMonitor(self.internal_state)
-        # self.speaking_policy_manager = SpeakingPolicyManager()
-        # self.action_selection = ActionSelection()
+        #self.memory_manager = MemoryManager(self.internal_state)
+        #self.self_monitor = SelfMonitor(self.internal_state)
+        self.speaking_policy_manager = SpeakingPolicyManager()
+        self.action_selection = ActionSelection(self.internal_states, self.speaking_policy_manager)
     
     def talk(self, question, world_info):
         response = self.generate_response(question)

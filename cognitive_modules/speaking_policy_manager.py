@@ -40,7 +40,8 @@ class SpeakingPolicyManager:
         behavior += context
         return behavior.strip()
 
-#TODO: Implement a history system so it keeps track of the last 3-5 dialogues and its contexts
+#TODO: Implement a history system so it keeps track of the last 3-5 dialogues and its contexts.
+#NOTE: A complete implementation or upgrade could handle the analysis with world rule based system as Cristian mentioned.
 
 # Example Usage
 # speaking_policy_manager = SpeakingPolicyManager()
