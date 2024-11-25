@@ -13,6 +13,7 @@ class MemoryManager():
     def recall(self, prompt):
         distant_memories = self.long_term_memory.retrieve_memories(prompt)
         recent_memories = self.short_term_memory.retrieve_memories(prompt, k=3)
+        self.short_term_summary.add_memory("the player says: " + prompt)
         self.internal_state.knowledge = distant_memories + recent_memories
     
     def get_character(self, character_name):

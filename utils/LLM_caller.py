@@ -12,7 +12,9 @@ class LLMCaller:
     def __init__(self, service="openai", model_name="gpt-4o"):
         self.service = service.lower()
         self.model_name = model_name
+        self.verify_service()
         
+    def verify_service(self):
         if self.service == "openai":
             self.api_key = os.getenv("OPENAI_API_KEY")
             if not self.api_key:
@@ -28,8 +30,13 @@ class LLMCaller:
         else:
             raise ValueError(f"Unsupported service name: {self.service}")
 
+    def change_service(self, service):
+        self.service = service.lower()
+        self.verify_service()
+
     def set_model(self, model_name):
         self.model_name = model_name
+        self.verify_service()
 
     def generate_text(self, prompt):
         if self.service == "openai":

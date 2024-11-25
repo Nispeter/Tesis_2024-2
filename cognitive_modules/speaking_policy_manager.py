@@ -2,10 +2,10 @@ from cognitive_modules.pragmatic_analyst import ConversationContext, PragmaticAn
 from cognitive_modules.emotional_module import EmotionalModule
 
 class SpeakingPolicyManager:
-    def __init__(self):
+    def __init__(self, conversation_context):
         self.emotional_module = EmotionalModule()
         self.pragmatic_analyst = PragmaticAnalyst()
-        self.conversation_context = ConversationContext()
+        self.conversation_context = conversation_context
         
         self.speaking_policies = {
             "anticipation-1": "Speak with curiosity and expectation.",
@@ -24,20 +24,17 @@ class SpeakingPolicyManager:
     def classify_and_update_emotions(self, input_text):
         classified_emotion = self.emotional_module.classify_emotion(input_text)
         print(f"Classified Emotion: {classified_emotion}")
-        self.emotional_module.reset_emotional_state()
         self.pragmatic_analyst.update_context(input_text)
 
     def define_speaking_behavior(self):
-        behavior = ""
+        context = self.pragmatic_analyst.context_summary()
+        behavior = context + "\n" + "Emotional State: " 
         emotional_state = self.emotional_module.emotional_state
         for emotion, intensity in emotional_state.items():
             if intensity > 0:  
                 search_policy = f"{emotion}-{intensity}"
                 if search_policy in self.speaking_policies:
                     behavior += self.speaking_policies[search_policy] + " "
-
-        context = self.pragmatic_analyst.context_summary()
-        behavior += context
         return behavior.strip()
 
 #TODO: Implement a history system so it keeps track of the last 3-5 dialogues and its contexts.

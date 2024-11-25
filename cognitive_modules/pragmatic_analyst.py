@@ -29,7 +29,6 @@ class PragmaticAnalyst:
         try:
             response = self.llm_client.generate_text(prompt).strip()
             attributes = self._parse_response(response)
-            print("Pragmatic analysis completed.")
             return attributes
         except Exception as e:
             print(f"Error analyzing pragmatic attributes: {e}")
@@ -75,7 +74,12 @@ class PragmaticAnalyst:
         )
 
 
+#TODO: Store previous 3 dialogues
+
 class ConversationContext:
+    
+    MAX_DIALOGUES = 3
+    
     def __init__(self):
         self.dialogues = []
         self.state = {
@@ -93,6 +97,9 @@ class ConversationContext:
         :param attributes: A dictionary of pragmatic attributes.
         """
         self.dialogues.append(dialogue)
+        if len(self.dialogues) > self.MAX_DIALOGUES:
+            self.dialogues.pop(0)
+            
         self.state.update({
             "intention": attributes.get("intention", self.state["intention"]),
             "tone": attributes.get("tone", self.state["tone"]),
