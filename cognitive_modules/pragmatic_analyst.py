@@ -44,7 +44,7 @@ class PragmaticAnalyst:
         for line in response.split("\n"):
             if ": " in line:
                 key, value = line.split(": ", 1)
-                attributes[key.strip().lower()] = value.strip()
+                attributes[key.lower()] = value.strip()
         return attributes
 
     

@@ -2,6 +2,8 @@ import numpy as np
 from sentence_transformers import SentenceTransformer, util
 import ollama
 
+from utils.LLM_caller import LLMCaller
+
 class ShortTermMemory:
     def __init__(self, long_term_memory, memory_size=5, forget_threshold=0.75, retrieval_threshold=3):
         self.memory = []  # List of (text, embedding, retrieval_count) tuples
@@ -10,6 +12,7 @@ class ShortTermMemory:
         self.retrieval_threshold = retrieval_threshold
         self.model = SentenceTransformer('all-MiniLM-L6-v2')
         self.long_term_memory = long_term_memory
+        self.llm_client = LLMCaller("openai", "gpt-4o-mini")
         print("Short term memory system initialized")
 
     def add_memory(self, text):
@@ -56,11 +59,11 @@ class ShortTermMemory:
         Summarizes and stores memories that exceed the retrieval threshold.
         """
         frequent_memories = [text for text, _, count in self.memory if count >= self.retrieval_threshold]
-
+        memories_as_string = "\n".join(frequent_memories) 
         if frequent_memories:
-            summary = self.summarize_memories(frequent_memories)
+            summary = self.summarize_memories(memories_as_string)
             print("storing: " + summary)
-            self.long_term_memory.add_data([summary])  # Pass summary as a list
+            self.long_term_memory.add_data([summary])  
             for memory in self.memory:
                 if memory[0] in frequent_memories:
                     memory[2] = 0
@@ -69,14 +72,16 @@ class ShortTermMemory:
         """
         Uses ollama to summarize a list of memories.
         """
-        response = ollama.chat(
-            model='llama3.2:3b',
-            messages=[{
-                "role": "user",
-                "content": "Summarize at the best of your abilities the following memories without adding new information: " + " ".join(memories)
-            }]
-        )
-        return response['message']['content']
+        response = self.llm_client.generate_text(memories)
+        # response = ollama.chat(
+        #     model='llama3.2:3b',
+        #     messages=[{
+        #         "role": "user",
+        #         "content": "Summarize at the best of your abilities the following memories without adding new information: " + " ".join(memories)
+        #     }]
+        # )
+        #return response['message']['content']
+        return response
 
 # # Example usage
 # long_term_memory = LongTermMemoryService()

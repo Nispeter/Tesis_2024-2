@@ -1,0 +1,346 @@
+﻿DESARROLLO DEL JUEGO HISTORIA 
+El jugador/Protagonista del juego puede ser de género femenino o masculino y pertenece al pueblo mapuche. Tiene el rol de Weichafe (guerrero mapuche) en su comunidad. Posee habilidades sobrenaturales que va obteniendo a medida que avanza en los niveles del juego.  La época de origen del jugador es indeterminada pero considerando la historia del juego debe haber nacido durante el siglo XVIII.
+
+
+La historia del juego inicia cuando el jugador del juego se encuentra en un enfrentamiento de su pueblo mapuche contra los conquistadores españoles en las costas de Arauco (Región del Biobío, Chile). El lugar donde se desarrolla la pelea es una planicie litoral en elevación donde se ven montañas, cerros y árboles nativos chilenos (Canelo, Naranjillo, Boldo, Maqui, Peumo, Lingue y Sauco Cimarrón, entre otras) hacia el frente del personaje. A las espaldas del personaje Jugador se observa el mar y en el horizonte, se ve la silueta de una isla (corresponde a la Isla Mocha). La pelea se desarrolla de noche, el cielo está despejado y lleno de estrellas, el mar está tranquilo. 
+
+
+El Jugador luchó cuerpo a cuerpo contra un conquistador español con armadura metálica que tiene protección  pectoral, de brazos y piernas. El jugador tenía protecciones de cuero y de lana en los brazos y en el resto del cuerpo, pero no era visible. También tenia el rostro pintado con pigmentos blancos, rojos y negros y no tiene cabellera. A la distancia, en medio de la pelea se ven a otras personas luchando cuerpo a cuerpo y a caballo.  La pelea se desarrolló de este modo hasta que el Jugador estaba rodeado por conquistadores empuñando armas corto punzantes (lanzas, espadas, puñales, macanas, etc.) y fue empujado hacia un risco, donde fue herido de muerte con una espada en su torso y cae por el acantilado hacia el mar. Tras unos segundos de espera, emergió de las aguas una ballena blanca, cargando en su lomo al jugador inconsciente. 
+
+
+Esta ballena es una  Trempulkawe o “portadora de ánimas” , también nombradas como “Trempulcahue”, correspondiente a criaturas que serían ballenas o cachalotes de color blanco encargadas de transportar a las almas fallecidas al lugar de encuentro de estas, localizado geograficamente en Isla Mocha.
+
+
+El Jugador despierto en la playa de una isla de noche y vio una vivienda de madera de coligüe forrada con Totora, cuyo techo es de Junquillo, el Jugador reconoció una ruka mapuche de la cual emana luz, indicando que habría alguien dentro. Aunque sus heridas estaban abiertas, su dolor había desaparecido. No supo si estaba vivo o muerto, estába en un estado etéreo. Era capaz de ver sus extremidades y sentirlas, pero no es capaz de tomar objetos físicos, no está mojado pese a haber aparentemente atravesado el mar, sus huellas no dejan impresiones en la arena y la ballena blanca se ha ido. 
+
+
+El jugador se aproxima a la ruka. Al ingresar, se da cuenta que hay una mujer anciana, de piel arrugada y curtida por el sol en su interior en la penumbra. Solo está iluminado un fogón en el centro y el Jugador solo ve a la mujer. Esta va ataviada con un manto de lana negro, sobre un vestido largo llamado chamal, tiene el cabello largo canoso recogido en una trenza, lleva en su cuello joyeria de plata llamada Trapelakucha y su cabeza la adorna un cintillo de plata llamado Keltawe. 
+
+
+Esta mujer es una machi. Un machi es un intermediario entre el mundo natural y el mundo del más allá. Además, es la autoridad de la medicina tradicional, administrando sanación a través del rito denominado machitun. Los machi, además de tener un conocimiento acabado y contacto directo con distintos planos de la existencia, ponen su sabiduría y sus facultades al servicio de la comunidad mediante la sanación de dolencias, tanto físicas como espirituales.
+
+
+Al interactuar con la machi, esta le dice a Jugador lo siguiente: 
+
+
+Bienvenido weichafe, tu camino todavía no ha terminado. Has llegado hasta la isla Mocha, donde te esperan pruebas de nuestros grandes ancestros. En esta ruka los encontrarás. Prepárate. 
+
+
+“¿Por qué yo?” preguntó el Jugador,  la Machi responde: has sido elegido por nuestros ancestros para recibir la fuerza y la sabiduría de tus antepasados, para así resistir finalmente a los wingka que intentan eliminarnos y hacerse con nuestras tierras. Esto ha pasado antes en nuestro pueblo, y volverá a pasar, por lo que no debes temer. 
+
+
+Dicho esto, la machi desaparece y la ruka permanece en penumbra, alcanzando a vislumbrarse apenas un trazado en el piso que tiene la forma de una cruz, que divide el interior de la ruka en cuatro cuadrantes de igual tamaño. 
+
+
+Jugador reconoce que esta forma es similar a la del instrumento de percusión tradicional de la cultura mapuche conocido como kultrun. Al fondo de los tres cuadrantes en donde Jugador no se encuentra de pie, se alcanzan a vislumbrar tres grandes siluetas de troncos tallados. 
+
+
+El jugador avista 2 chemamull o totems de madera, a lo que se acerca a el.
+
+
+Un chemamüll sería una figura antropomorfa tallada en un tronco de árbol nativo, generalmente laurel o pellín. Posee sus brazos al lado del tronco y en su cabeza presenta un gorro, que corresponde a un triangulo o trapezio invertido. Muchas veces el chemamüll era una representación de un antepasado. La estatua tenía funciones rituales y se emplazaba en cementerios y sus alrededores, pues protegían las almas de los difuntos de seres malignos y brujos.
+
+
+El chemamull del primer cuadrante donde el Jugador ingresa presenta tallado en su pecho un símbolo. En este, se puede observar una cabeza de ave, similar a un halcón. El cuerpo de esta ave, se conforma de representación de ráfagas de viento. 
+
+
+conocimiento jugador: El Jugador reconoce que se trata de un traro (carancho, un halcón), cruzando el cielo a gran velocidad por lo que lo relaciona inmediatamente con la figura de Lautaro (Leftraru, “Traro veloz”). Al interactuar el jugador con el chemamüll, este le habla
+
+
+LAUTARO - NIVEL 1
+
+
+Lautaro es un guerrero joven (20 años máximo) con el cabello largo sujetado por un cintillo (un trarilongko), en una mano tiene una lanza y colgando de su cuello tiene una piedra, una tokicura. Una tokikura era un hacha de piedra que se usaba en el pecho como insignia de mando de los líderes militares mapuche. Se viste con una larga manta recogida a manera de capa. Al interactuar el Jugador con el espíritu de Lautaro, este responde a sus preguntas y da inicio a su nivel.
+
+
+Lautaro: Soy Lautaro, hijo del Wallmapu. Mi padre fue Curñanco y a los 11 años de edad fui capturado por los españoles. Después de seis años con ellos y viendo la brutalidad con que trataban a mis hermanos cautivos, hui para volver a mi pueblo y liderar la rebelión contra ellos. Me transformé en el toqui o lider militar más joven de la historia del pueblo mapuche. Acompáñame. 
+
+
+El personaje sigue a Lautaro y se cambia de escena al mundo de Lautaro, donde al terminar el Jugador adquiere la habilidad de la velocidad. 
+
+
+
+
+Escenario de Lautaro (25 de diciembre de 1553):
+
+
+El Jugador ingresa al nivel y aparece en el centro del fuerte Tucapel, justo cuando está amaneciendo. El fuerte está en ruinas, con restos de incendio por doquier y cadáveres de españoles. A la distancia se alcanzan a escuchar gritos y ruidos de combate.
+El Jugador se encuentra justo sobre un camino, el cual debe seguir y que lo lleva fuera del fuerte. A medida que avanza por el camino va enfrentándose a soldados españoles (enemigos NPC fáciles).
+El camino sale del fuerte y baja del cerro en donde está. Al avanzar por el camino el paisaje cambia, y el Jugador se encuentra con que empieza a aparecer la ciénaga/pantano. Aquí se aplica la habilidad de este nivel, la barra de velocidad: si la barra de velocidad no está llena, el Jugador se ralentiza al avanzar por la ciénaga/pantano.
+Al paso le siguen apareciendo soldados españoles, a los cuales debe ir matando. Esto llena su barra de velocidad. Cuando ésta se llena por completo, puede avanzar sin problemas por la ciénaga/pantano y enfrentarse a Pedro de Valdivia, el cual aparecerá a caballo. 
+El Jugador debe llevar a Pedro de Valdivia hasta una ciénaga/pantano/humedal para que se entrampe. Una vez entrampado, Pedro de Valdivia se vuelve muy lento, facilitando esquivarlo y pegarle gracias a la barra de velocidad completamente llena.
+Derrotado Pedro de Valdivia, vuelve a la ruka. Conversa con Lautaro y obtiene el poder de forma permanente. 
+
+
+NIVEL DE JANEQUEO - NIVEL 2
+Al terminar el nivel de Lautaro, el Jugador vuelve al cuadrante iluminado y ve que el cuadrante de la izquierda también se ilumina. Al ingresar, encuentra un nuevo Chemamull con una cara de felino en el pecho, que el Jugador identifica como un nahuel. Lautaro narra la historia y el contexto del siguiente nivel.
+Narración de Lautaro: "Janequeo es una mujer joven, cónyuge del longko Huepotaen, hermana de Huenchuntureo. Los españoles capturaron y torturaron a Huepotaen, dejando su tierra, las montañas de Nahuelbuta, sin líder. Janequeo asumió el rol de liderazgo y luchó valientemente contra los invasores, aunque muchos de los suyos cayeron debido a las enfermedades traídas por los wingka. Ahora debes seguir sus pasos."
+Escenario: El Jugador emerge desde una cueva en plena cordillera de Nahuelbuta, encontrando unas botijas vacías. Al salir, es atacado por un zombie y descubre que las botijas contenían viruela, diezmando la población. Enfrenta españoles y mapuches zombies en tres plataformas, cada una elevándose tras derrotar a todos los enemigos. Al final, enfrenta al enemigo final: La Peste. Tras derrotarla, el Jugador regresa a la cueva y conversa con Janequeo, obteniendo la habilidad de la tierra y un aumento de la barra de vida. Janequeo se convierte en chemamull y se desbloquea el tercer chemamull, con un volcán en erupción en el pecho.
+________________
+
+
+NIVEL DE PELANTARO - NIVEL 3
+El Jugador vuelve al cuadrante iluminado y ve que otro cuadrante a la izquierda se ilumina, revelando un Chemamull con un volcán en erupción en el pecho. Lautaro narra la historia de Pelantaro.
+Narración de Lautaro: "Pelantaro, un hombre mayor con cicatrices y pintura roja en el rostro, lideró a los guerreros mapuches tras la muerte de Lautaro. Frenó el avance de los españoles, obligándolos a firmar una paz humillante. Ahora debes demostrar tu valía bajo su mando."
+Escenario: El Jugador emerge desde el cráter de un volcán y cae a las afueras de Villarrica, sitiada por los españoles. Utiliza el poder de tierra para ingresar a la ciudad e incendiar cinco construcciones protegidas por soldados españoles. Con cada enemigo derrotado, su poder de fuego aumenta. Al incendiar todas las construcciones, se traslada a la plaza para enfrentar a Oñez de Loyola, usando todos los poderes adquiridos. Tras derrotarlo, obtiene las habilidades combinadas y regresa a la ruka, donde los tres guerreros lo felicitan.
+Final: El Jugador sale de la ruka y se encuentra con la machi, quien le dice que debe revivir y volver a luchar. La machi se transforma en ballena y lo lleva a su próxima misión.
+
+
+
+
+
+
+El personaje sigue a Pelantaro y se cambia de escena al mundo de Pelantaro, donde al terminar el Jugador adquiere la habilidad del fuego.  El chemamull
+
+
+El Jugador sale de la ruka, se encuentra con la machi que le dice que debe volver a luchar, que debe revivir. La machi se tira al agua, se convierte en ballena, y se lo lleva.
+
+
+INFORMACIÓN HISTÓRICA Y FANTÁSTICA DE PERSONAJES
+
+
+Lautaro histórico:
+
+
+“Como ejemplo de esta limitante encontramos al afamado Lautaro, quien surgió por el reconocimiento que hicieron ciertas parcialidades a su valentía e ímpetu (Bibar, Gerónimo de (1558) 1979, p. 202).”
+
+
+“Desta manera el escuadrón camina
+en la callada noche y sombra escura
+debajo del gobierno y diciplina
+del cuidoso Lautaro, que procura
+llegar cuando la estrella matutina
+alegra el mustio campo y la verdura,
+antes que por aviso y doble trato
+de su venida hubiese algún recato”
+La Araucana, canto IX.
+
+
+“diciendo en alta voz: «Si no me engaño,
+no deben de saber que soy Lautaro
+de quien han recebido tanto daño,
+daño que no tendrá jamás reparo;
+mas porque no me tengan por estrañoy el ser yo aquí venido sea más claro,
+sabiendo con quien vienen a la prueba,
+quiero que este rocín lleve la nueva».”
+La Araucana, canto XI
+
+
+
+
+Lautaro  es fuerte con el fin de derrotar a sus enemigos y derrotar esas amenazas era su único objetivo.Tranquilo y moderado, excepto cuando batallaba. Se volvía intransigente y duro con sus enemigos. Enérgico, animado y rápido. Altamente observador y perceptivo, analizando constantemente sus alrededores para adelantarse a las amenazas. Se toma su tiempo para analizar todas las opciones antes de tomar una decisión. Metódico 
+en la solución de problemas.
+
+
+
+
+
+
+
+
+Janequeo histórico.
+“La primera vez que aparece la imagen de la Toqui Janequeo es a mediados del siglo XVII. El Padre Alonso de Ovalle le dedica dos capítulos en su crónica Histórica Relación del Reyno de Chile. Esta crónica es la primera en tratar exclusivamente sobre el país, no es un texto que haya sido escrito bajo el rigor de una investigación o documentación. Es más bien lo que oyó sobre el tema, por lo que la forma más adecuada es entender esta obra como un testimonio bastante ilustrativo de la época, pero no necesariamente veraz. En el texto habla sobre la campaña que encabezó Janequeo tras la muerte de su esposo. Sobre sus atributos, la describe de la siguiente manera: “En esto se ocupará aquella gente, y cuando la famosa Yanequeo, digna de contarse entre las bravas, y varoniles matronas, q refieren las historias, trazando la venganza de la muerte de su marido Guepotaen” 
+
+
+conocimiento NPC: Janequeo es de actitud desafiante, asertiva y práctica. Busca mantener las tradiciones y el orden, se esfuerza mucho, incluso si significa arriesgar mucho.  Honesta y eficiente. Orgullosa de quien es, de su comunidad y de sus valores y creencias. Más poderosa de lo que parece, le gusta medir su fuerza frente a otros contrincantes. Si dañan a sus cercanos se vuelve vengativa. 
+
+
+
+
+
+
+Pelantaro histórico: 
+“el caso de Pelantaro, a quien Pailamacho describió como un hombre afable, apacible y manso (Arias de Saavedra, Diego, 1862, canto II, p. 46). Añadió este veterano cacique que el mayor reconocimiento se lograba manteniendo la unidad, pues, les permitía conservar la fuerza para luchar y alcanzar una victoria más digna al disminuir el derramamiento de sangre (Arias de Saavedra, Diego, 1862, canto II, p. 47).” 
+
+[Arias de Saavedra, Diego: (Álvarez de Toledo, Fernando): Purén Indómito. Leipzig, 1862.]
+
+
+
+
+Pelantaro es parco y de pocas palabras.Es altamente competitivo e impulsivo. Valora la fuerza y el poder, confiando más en sus propias habilidades que en la del equipo, lo que muchas veces le hace caer en el individualismo y en la autoconfianza. Posee un fuerte sentido de la justicia, pero también es vengativo, lo que a veces le hace caer en un carácter fuertemente agresivo. Es extremadamente protector con los suyos, pero su carácter puede hacer que su juicio se nuble, además de tener una baja tolerancia a la derrota y la frustración. 
+
+
+
+
+DISEÑO DE NPC - ENEMIGOS NIVELES
+
+
+Pedro de Valdivia es enemigo de Lautaro. 
+Es ambicioso, desea que su nombre quede en la historia. Ha viajado hasta la tierra que llama Chile por codicia y soberbia. Desea ser reconocido por el rey de España, y se le suben rápidamente los humos a la cabeza. Está consciente de los privilegios que ha logrado a través de la conquista, pero aún así desea obtener más. Sus maniobras políticas generalmente se ven enfrentadas a las dificultades que le plantean los mapuche, un enemigo al que no termina de entender y que cree ignorantemente que puede someter por la fuerza, producto de su mentalidad militar. 
+Es un hombre maduro, entrado en años. Su contextura es musculosa y alta. Su rostro luce un bigote y una barba puntiaguda y encanecida. Va siempre montado a caballo. Viste una pechera de metal, y protecciones de metal en brazos, muslos y piernas. Una banda roja cruza la pechera, sostenida por un medallón en el hombro. Lleva un sable como arma y un escudo cuadrado como defensa.
+
+
+Soldados españoles (enemigos en todo nivel).
+Distintos soldados españoles con armadura, algunos con casco, otros con escudo, algunos con lanzas, otros con espadas, otros menos con arcabuces. Son guiados principalmente por la codicia y la promesa de obtener gloria para ellos y sus futuras generaciones en América.
+
+
+La Peste es enemiga de Janequeo, contagiando tanto a españoles como a mapuches. La peste es un personaje misterioso y siniestro, oculto bajo sus ropajes y máscara, nadie sabe cómo es lo que se oculta debajo de estos. No se sabe mucho sobre su personalidad ya que no se comunica mucho pero su objetivo final es contagiar de la enfermedad de la viruela  a quienes se les acerque.Es un ser antinaturalmente alto y delgado. Personaje sin género representado en un cuerpo humanoide que lleva una máscara de doctor de la plaga, hecha de cuero cosido que cubre todo su rostro, con dos aberturas para los ojos y, en la mitad inferior del rostro, una protuberancia puntiaguda que se asemeja al pico de un ave. Lleva un hábito de monje en color negro, una capa con capucha que cubre su cabeza también negra y en su espalda tiene alas hechas de hueso. 
+
+
+La enfermedad de la peste genera que las personas contagiadas se comportan como zombies, erráticamente y lento. La piel de los personas contagiadas se vuelve grisácea oscura debido a hemorragias cutáneas, llagas pústulas abiertas y presentan chorros de sangre oscurecida por los ojos y nariz. Sus ojos se vuelven blancos y pueden perder extremidades debido a la gangrena (brazos o piernas). Sus ropajes están rotos y sucios por la sangre que brota de sus múltiples heridas.
+
+
+Oñez de Loyola es enemigo de Pelantaro.
+Su carácter es principalmente orgulloso, debido a los triunfos militares que consiguió en Perú, derrotando y capturando al último gobernante Inca rebelde. Mira en menos a los pueblos americanos, debido a la creencia de que si pudo derrotar a los incas, cualquier podría ser derrotado. Eso también se basa en que ha llegado a una larga edad, siendo un hombre maduro cuando llega a Chile (muere casi de 50 años). Su contextura es delgada, con una barba blanca y con una pronunciada calvicie. Su ropa de combate es la clásica armadura compuesta por una pechera de metal, que recubre un peto de cuero. Del mismo metal posee protecciones en brazos, muslos y piernas. (Para diferenciarla de PdV puede llevar distintos colores. Una puede ser plateada y otra cobriza). Su arma es una espada y un escudo redondo 
+
+
+MUNDO Y CONOCIMIENTO GENERAL   
+Pregunta: ¿Qué es el wallmapu?
+Lautaro: El Wallmapu es la tierra ancestral de los mapuche, extendiéndose a lo largo de lo que hoy es el sur de Chile y Argentina. Es un lugar de gran riqueza natural y espiritual.
+Pregunta: ¿Quiénes fueron Janequeo y Pelantaro?
+Lautaro: Janequeo fue una valiente líder mapuche que asumió el liderazgo después de la captura y tortura de su esposo, Huepotaen. Luchó valientemente contra los invasores y defendió a su gente en numerosas batallas. Pelantaro, por otro lado, tomó el liderazgo tras mi muerte y continuó resistiendo el avance de los colonizadores españoles, forzándolos a firmar una paz humillante.
+Pregunta: ¿Cómo puedo mejorar mis habilidades en el juego?
+Lautaro: Para mejorar tus habilidades, debes enfrentar y derrotar a los enemigos que encuentres en tu camino. Obtendas el poder de la velocidad, fortaleza y fuego
+Pregunta: ¿Qué debo hacer para derrotar a Pedro de Valdivia?
+Lautaro: Pedro de Valdivia aparecerá a caballo en la ciénaga. Usa tu velocidad para llevarlo hacia el pantano, donde se entrampará y se volverá lento. Esto te dará la oportunidad de esquivarlo y atacarlo con eficacia.
+Pregunta: ¿En que época estamos?
+Lautaro: Vivimos cerca del siglo XVIII como lo llamarían los conquistadores.
+Pregunta: ¿Cómo desbloqueo los niveles de Janequeo y Pelantaro?
+Lautaro: Una vez que derrotes a Pedro de Valdivia y obtengas mi poder, yo te contaré sobre Janequeo. Después de completar su nivel y obtener su poder, te contaré sobre Pelantaro. Al completar cada uno de sus desafíos, adquirirás habilidades adicionales necesarias para avanzar.
+Pregunta: ¿Qué poderes obtendré al completar los niveles?
+Lautaro: Al completar el nivel de lautaro, obtendrás el poder de la velocidad, Al completar el nivel de janequeo obtendrás el poder de la tierra y al completar el nivel de pelantaro obtendrás el poder del fuego.
+Pregunta: ¿Qué elementos debo combinar para generar hechizos?
+Lautaro: En tu viaje, combinarás elementos de luz, espíritu y arcano para crear hechizos poderosos. Aprende a utilizar cada combinación de manera estratégica para enfrentar a los jefes de los niveles.
+Las habilidades mágicas del jugador le permiten emplear hechizos mitológicos combinando los elementos, aquí hay 3 ejemplos. (luz-luz-luz) protección divina, (arcano - espiritu - espiritu) esquirla de hielo, (arcano - arcano - arcano) misiles magicos.
+
+
+Pregunta: ¿Por qué llevo un bastón?
+Lautaro: Llevas un bastón porque es una herramienta poderosa para canalizar tu energía mágica. Como mago mapu, utilizas el bastón para combinar los elementos de luz, espíritu y arcano, generando hechizos que te ayudarán a enfrentar y derrotar a tus enemigos.
+Pregunta: ¿Qué es este lugar?
+Lautaro: Este lugar es la isla mocha, isla ancestral y arcana donde los espiritus de los mapu que aun tienen deseos pendientes deben acudir para trascender como espiritus guerreros.
+Pregunta: ¿Que debo hacer?
+Lautaro: Deberás pasar 3 pruebas para poder ascender, los invasores, la peste y la ciudad. Luego tendrás que enfrentarte a ti mismo.
+Pregunta: ¿Cuáles son los tres desafíos?
+Lautaro: Los tres desafíos que enfrentarás están representados por las historias de tres grandes líderes mapuche: yo, Lautaro; Janequeo; y Pelantaro. te guiare a través de pruebas que pondrán a prueba tus habilidades y determinación. Primero, deberás enfrentar a Pedro de Valdivia en el desafío de la velocidad y estrategia. Luego, en el nivel de Janequeo tendrás pruebas que requerirán tu fuerza y resistencia contra la plaga/peste para luchar contra la representación de las enfermedades. Finalmente, en el nivel de Pelantaro te preparará para un enfrentamiento final donde deberás incendiar una ciudad sitiada, luego para luchar contra  Oñez de Loyola.
+Pregunta: ¿Qué es una machi?
+Lautaro: Una machi es una autoridad espiritual y médica en la cultura mapuche. Actúa como intermediaria entre el mundo natural y el mundo espiritual, realizando rituales de sanación y protección. Su conocimiento y conexión con distintos planos de existencia son esenciales para la comunidad.
+Pregunta: ¿Qué es un chemamüll?
+Lautaro: Un chemamüll es una figura antropomorfa tallada en un tronco de árbol nativo, utilizada en rituales y emplazada en cementerios. Representa a un antepasado y tiene la función de proteger las almas de los difuntos de seres malignos y brujos.
+Pregunta: ¿Qué es un toqui?
+Lautaro: Un toqui es un líder militar en la cultura mapuche. El toqui es elegido por su valentía, habilidad en combate y capacidad de liderazgo. Como toqui, guié a mi pueblo en la lucha contra los invasores españoles.
+Pregunta: ¿Por qué hay elevadores?
+Lautaro: Los elevadores son manifestaciones de magia ancestral. 
+
+
+HISTORIA DE CULTURA MAPUCHE
+
+
+Los antecedentes más antiguos del grupo mapuche como los conocemos hoy, poseen una antigüedad de más de 800 años, a partir de excavaciones arqueológicas realizadas en el sur de Chile y se les ha considerado como los herederos culturales de grupos prehispánicos de la región, como la Cultura Pitrén y la Cultura Vergel. La cultura mapuche presenta un arraigo territorial importante y si bien existen autores que difieren en su extensión, se puede decir que estuvieron presentes desde el Maule hasta Chiloé, e incluso al otro lado de la Cordillera de los Andes. Esto implicó el desarrollo de diferentes manifestaciones culturales e identitarias en los sectores que ocupó. Así, encontramos a los pikunche (gente del norte) que habitan entre el río Aconcagua y el Biobío; a los lafkenche (gente del mar) que habitan las costas de lo que hoy es la región del Biobío y la Araucanía; a los pehuenche (gente de las araucarias) que habitan los Andes entre las dos regiones antes mencionadas; y a los huilliche (gente del sur) que habitan las costas de la región de los Lagos continental y la isla de Chiloé. De la misma manera, existen comunidades mapuche al otro lado de la cordillera de los Andes, así como otras subdivisiones más finas. 
+
+
+Antes de la llegada de los españoles, los Mapuche también se encontraron con otros pueblos originarios, siendo uno de los eventos más conocidos y destacables, la llegada de los Incas en su expansión hacia el sur, la cual fue detenida por los Mapuche. 
+
+
+Una situación similar ocurrió luego de la llegada de los españoles, donde los diferentes grupos juntaron sus fuerzas para resistir la invasión, logrando detener la expansión hacia el sur. En 1641, se firman las Paces de Quilin entre españoles y mapuche. De esta forma, los mapuche pudieron conservar su autonomía cultural en gran parte del territorio. Esta situación se mantendría hasta el siglo XIX, donde fueron invadidos por el estado chileno e incorporados a este por la fuerza. Al día de hoy, los Mapuche son el pueblo originario más numeroso en Chile, habitando por igual sectores rurales y urbanos. 
+
+
+ARTE MAPUCHE
+
+
+Antes de la llegada de los españoles, los grupos mapuches realizaron vasijas de cerámica, las cuales además de tener una función doméstica (cocinar), también fueron utilizados como soportes de expresiones artísticas. Así, se encuentran variadas expresiones de decoraciones con pinturas (rojas y blancas) y también de modelados en forma de aves. 
+
+
+También en el mundo Mapuche se utilizó la madera de árboles nativos para realizar objetos de uso diario y elementos rituales, como máscaras (kollong) y figuras antropomorfa, como los chemamules (ver sección de Cosmovisión y Funebria). A esto se suma la construcción de canoas (wampos) en troncos de árboles ahuecados. 
+
+
+Otra manifestación tradicional de los Mapuches corresponde a los tejidos, los cuales se realizaron sobre lana de camélidos semidomesticados que poseían. A partir de esto, elaboraron mantas, bolsas y fajas. A esto, se suma el trabajo en metales, destacando el trabajo sobre cobre, donde desarrollaron anzuelos y adornos corporales, como pulseras y aros. Posterior a la llegada de los españoles, se incorpora la plata como elemento fundamental de la metalurgia mapuche, reemplazando al cobre. 
+
+
+COSMOVISIÓN MAPUCHE
+
+
+Las creencias, símbolos y prácticas del pueblo mapuche sientan las bases de la relación y la interpretación que estos tienen con el mundo que los rodea, y entre los individuos como gente de la tierra. A esta cosmología se le denomina en la lengua mapuche como Admapu, y ha sido traspasada de manera oral desde tiempos ancestrales.
+En la cosmovisión mapuche, tanto la tierra como las personas que lo habitan fueron creadas por Ngenechen (el dueño de los hombres), una entidad suprema protectora. Muchas de las ceremonias religiosas mapuche, como el Nguillatun, se realizan solicitando, rogando o agradeciendo a Ngenechen.
+
+
+Además de Ngenechen, existen cuatro deidades, representaciones ideales y arquetípicas de cómo deben ser los seres humanos: el Fücha (Anciano), la Kuse (Anciana), el Weche Wentru (el Joven) y la Üllcha Domo (la Joven).
+
+
+Así como en el mundo material existen los seres humanos, el pueblo mapuche establece que es posible encontrar otras formas de vida o entidades que sirven como guardianes y preservadores de ciertos espacios del mundo. A estos seres se les denomina Ngen, y fueron colocados en el mundo para gobernar un elemento específico de lo creado.
+De manera similar, también existen los Pillan, que en tiempos pretéritos se adoraban como antepasados míticos fundadores de un linaje, pero que actualmente se encuentran más asociado a volcanes o montañas. Estos sitios, generalmente sagrados, serían donde el Pillan habitaría.
+
+
+Adicional a estas fuerzas y entidades, es parte de la cosmovisión mapuche la existencia de fuerzas contrapuestas, nocivas o malignas para los seres humanos. Estas fuerzas cohabitan el mundo junto con los seres humanos, y encontrarse con ellas puede tener consecuencias negativas. Algunas de estas entidades son el wekufe (nombre genérico para cualquier tipo de espíritu maligno), el cherufe y el witranalwe.  
+El universo es representado como una serie de planos superpuestos: Wenu Mapu, Nag Mapu y Miñche Mapu (la tierra de arriba, de abajo y de debajo, respectivamente). En el primero habita Ngenechen y las cuatro deidades, así como los antepasados. En el segundo habitan los seres humanos, ngen, animales y plantas. En el tercero, subterráneo, habitan entidades que resultan dañinas para los seres humanos.
+
+
+En la sociedad mapuche, existen individuos que son los guardianes de esta sabiduría, y que son además capaces de interactuar con las entidades y los planos antes mencionados de manera ritual: se trata de los y las machi. Los machi, además de tener un conocimiento acabado y contacto directo con distintos planos de la existencia, ponen su sabiduría y sus facultades al servicio de la comunidad mediante la sanación de dolencias, tanto físicas como espirituales.
+
+
+Al igual que todas las culturas humanas, los mapuche desarrollaron un patrón de ritos mortuorios específicos. Las formas de entierro antiguamente fueron variadas: los difuntos se disponían al interior de wampo (canoas) o troncos ahuecados, cistas de piedra, inhumaciones directas o urnas de cerámicas, siendo esta última modalidad extendida en la ancestral cultura El Vergel, predecesora directa de la Mapuche. 
+Para el pueblo mapuche, la muerte era una puerta que unía dos mundos semejantes. Al traspasarse dicho umbral, se entraba a otro en que los ancestros continuaban realizando las mismas actividades que en la tierra.Los mapuches no precisaban de salvar su alma, pues todos pueden ir a la tierra de los muertos, pero para acceder a ella era necesario que la comunidad del difunto lo ayudara, esto se hacía a través del ritual funerario.
+
+
+
+
+Existen tres conceptos para hacer referencia a la esencia-alma de las personas que presentan variaciones en su alcance y significado según la ubicación geográfica en que se revise este: Püllü, Am y Alwe.
+
+
+El alma-esencia de las personas presentaría varios componentes: am (alma), püllü (espíritu) y alwe (esencia viviente) y si bien todos los seres vivos tienen püllü solo los seres humanos tienen am. Püllü hace referencia a la esencia de las personas o a sucomo carácter, personalidad o don que como alma. También se le denomina “mente inmortal” y otras definiciones indican que sería una presencia-esencia-energía que acompaña al ser humano para acompañar al hombre y protegerlo del mal.. También se ha definido como espíritu y que existe desde antes del nacimiento y que está presente en todas las personas. Se cree que al fallecer, el püllü trasciende buscando donde posarse en sufrimiento.
+
+
+El Am es la naturaleza particular de cada persona. Algunas personas lo definen como el cuerpo-retrato de las personas, que al fallecer abandona el cuerpo y deambula atravesando cualquier barrera. También es definido como superposición del püllü con características similares, acompañando a los deudos a través de los recuerdos que estos tengan del difunto. Cuando las personas fallecen, es la imagen que permanece con las personas vivas, habitando como el “otro yo” de la persona difunta y que posteriormente desaparece. Finalmente, el Alwe hace referencia al cuerpo inerte o cuerpo-carne de las personas, “lo que se transforma en tierra” cuando las personas fallecen y abandonan su forma terrenal.
+
+
+VIVIENDA
+
+
+La vivienda tradicional en la cultura Mapuche era conocida como ruka, que era el lugar donde habitaba la familia extensa. Si bien presenta diferentes tamaños, sus formas más tradicionales son las circulares y elípticas. Su estructura se sostenía en una armazón de madera sólida, de árboles nativos, siendo recubierta en su techo y paredes con manojos de vegetales secos o paja. Su construcción era comunitaria, es decir, se realizaba con la colaboración de los miembros de la familia, en una fiesta llamada rukatun. 
+
+
+No existían en sus paredes vanos que sirvieran como ventanas y sólo poseían una entrada, la que se orientaba hacia la salida del sol. Dentro de la ruka casi no existían muebles y los utensilios se colgaban en las paredes o en el techo. Las camas se ubicaban junto a las paredes. En el centro de esta gran habitación, se encontraba un fogón el cual debía permanecer siempre encendido. Esto tiene una doble explicación: por un lado mantener el espacio temperado, pero también impedía que entraran espíritus causantes de daño a los integrantes de la familia, como los wekufe.
+
+
+ORGANIZACIÓN SOCIAL
+
+
+En el mundo tradicional mapuche existe un cuerpo normativo ancestral, tradicional y no escrito, que regula las relaciones entre las personas, llamado Admapu. Este establece los ideales que deben regir el comportamiento de las personas dentro de su comunidad. Así, las características que debería tener un mapuche son: 
+
+
+1. Sabiduría
+2. Recto, justo y respetuoso
+3. Bondad, trabajador, solidario y equitativo
+4. Poseer fuerza física y psicológica. 
+
+
+Estas características eran esenciales al momento de tener un rol preponderante en la sociedad mapuche, ya que esta presentaba una organización horizontal, es decir, se establecía que todas las personas poseían igualdad de condición, sancionándose socialmente el intento de subyugar a un grupo por sobre otro. De esta forma, se esperaba que quienes tomarán roles importantes dentro de la sociedad Mapuche, cumplieran con lo establecido en el Admapu. 
+
+
+Dentro de estos roles, destaca la figura ancestral del lonko. Este corresponde al líder de la unidad social básica, llamada lof, que podría asimilarse a una familia extendida occidental. Es importante mencionar que el lonko no solo es quien conduce el liderazgo político, sino que también ritual de su lof, encabezando los ngillatun. 
+
+
+En cuatro a la espiritualidad, se debe mencionar también como un rol fundamental también el ejercido por la Machi. Este rol corresponde a una persona que sirve de intermediario entre el mundo natural y aquel mundo del más allá. Además, es la autoridad de la medicina tradicional, administrando sanación a través del rito denominado Machitun. 
+
+
+Cercanos a los lonkos se encuentran dos figuras fundamentales: el werken y el weupife. El primero, cumple las funciones de vocero de su lonko, pudiendo también buscar generar alianzas con otros lof. Por su parte, el weupife cumple la función de “hombre sabio” dentro del lof y puede actuar como consejero del lonko. Es él quien debe asegurar la mantención y transmisión del pasado de su comunidad. 
+
+
+Durante la Guerra de Arauco, aparece con fuerza la figura del Toki, o lonko en tiempos de guerra. Se debe mencionar que existieron dos tipos de  toki: el ngen toki, (o Señor del Hacha), quien era el encargado de dirigir la guerra y el ngen foye, o el Señor del Canelo, quien tenía la función de negociar y lograr la paz. Finalmente, se debe destacar la figura del Weichafe, el cual corresponde a un guerrero mapuche, este debía poseer los atributos necesarios para desarrollarse material y escénicamente en un combate. En otras palabras, debía no solo manejar las armas, sino que también dominar los gestos y expresiones que el combate requería. 
+
+
+MAPUDUNGUN - LENGUA MAPUCHE 
+
+
+Al igual que todos los grupos humanos, el pueblo mapuche tiene su propia lengua: el mapudungun (mapu: ‘tierra’; dungun: ‘habla’; habla de la (gente de la) tierra). Como idioma, posee varias particularidades interesantes. 
+En primer lugar, datar su antigüedad es difícil. Sabemos a ciencia cierta que, a la llegada de los españoles al territorio, era la lengua hablada transversalmente desde Coquimbo hasta Chiloé, a ambos lados de la cordillera.
+
+
+Tipológicamente, es una lengua polisintética y aglutinante (lo que la hace muy distinta al español, que es flexiva). Polisintética, en el sentido de que una palabra puede estar compuesta de varios morfemas (unidad mínima significativa), que al combinarse dan origen a nuevas palabras. Por ejemplo, el propio término mapuche: mapu=tierra; che=gente; mapu+che=gente de la tierra. Aglutinante, en el sentido de que cada morfema contiene generalmente un único significado, no se confunden ni fusionan entre sí y se mantienen independiente. Por ejemplo, ‘mapu’ significa únicamente tierra, y al combinarse con otros morfemas no pierde su forma (veáse mapu-dungun, mapu-che, wenu-mapu, etc.).
+Además, la lengua tiene una tendencia a la sufijación. Es decir, que nuevos morfemas se agregan a un morfema principal (llamado raíz) siempre al final de la “palabra” que se está formando.
+También se puede destacar su tendencia verbalizante. Es decir, el mapudungun no tiene problemas en incorporar sustantivos a sus verbos, o verbalizar sus sustantivos mediante morfemas que cambian la categoría de la palabra. Por ejemplo, en mapudungun es fácil encontrar palabras como está:
+Wiñamwekatrünkachillameaymi
+1. Wiñam - (2) we - (3) katrü - (4) n - (5) kachilla - (6) me - (7) a - (8) ymi
+(1) Wiñam = Mover en carretilla. (2) We = Nuevo. (3) Katrü = Cortar. (4) N = infinitivo. (5) Kachilla = Trigo. (6) Me = desplazamiento de ir y volver. (7) A = Tiempo futuro. (8) Ymi = Tú.
+Entonces, esta “palabra” se traduciría como una frase completa en español: “Tú moverás en carretilla, yendo y viniendo, el trigo recién cortado.”
+Otra característica interesante del mapudungun es que no tiene filiación con ninguna otra lengua del mundo. Es decir, no está emparentada con ningún otro idioma, ni vecino geográficamente ni de otro tipo. Tampoco pertenece a una familia lingüística, como las lenguas romances. A este curioso fenómeno (también compartido, por ejemplo, con el euskera) se le conoce como lengua aislada.
+Sin embargo, el mapudungun si tiene dialectos. Estos consisten en variaciones en sonidos y palabras específicas de distintos territorios, las cuales no impiden la inteligibilidad entre sus hablantes. Por ejemplo, el sonido “f” (como en “foye”) del mapudungun es propio de los hablantes de la zona central, pero en la costa el mismo sonido se pronuncia como “b” (“boye”). Pese al cambio de sonido, ambas palabras se refieren al mismo elemento: el canelo.
+CRIATURAS MITOLÓGICAS
+
+
+Trempulkawe o “portadora de ánimas”.También referenciadas como “Trempulcahue”, corresponden a criaturas que serían similares a ballenas o cachalotes de color blanco que serían las encargadas de transportar a las almas fallecidas al lugar de encuentro de estas,  usualmente localizado geograficamente en Isla Mocha. 
+
+
+Otras versiones de la leyenda establece que corresponde a cuatro mujeres que se transforman en ballenas blancas para cumplir la labor del transporte de almas. Los espíritus llegan en grupo (dirigidos por un jefe) a orillas de un barranco donde llaman a trempulkawe para que los recoja, a su llegada le pagan con llancas. Las llancas/llankas (piedras de pequeño tamaño de color cobrizo con tintes verde-azulado) que suelen ser depositadas cerca del cadaver en cuestión. Este viaje del alma duraría mientras el cadáver se descompone y duraría aproximadamente un año.
+
+
+Las Trempulkawe usualmente se vinculan con figuras homólogas europeas-occidentales, por ejemplo Caronte o del barquero que lleva a las almas al “más allá” en base a un pago. En Chiloé se menciona que existe un sincretismo con la cosmovisión española y donde el rol de las Trempulkawe sería representado con la imagen literal de un barquero y con variación en la denominación: Tempilcahue.

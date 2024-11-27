@@ -50,13 +50,18 @@ class LLMCaller:
 
     def _generate_openai(self, prompt):
         try:
-            response = openai.Completion.create(
-                engine=self.model_name,
-                prompt=prompt,
+            response = openai.chat.completions.create(
+                model=self.model_name,
+                messages=[
+                    {
+                        "role":"user",
+                        "content":prompt
+                    }
+                ],
                 max_tokens=150,
                 temperature=0.7
             )
-            return response.choices[0].text.strip()
+            return response.choices[0].message.content
         except Exception as e:
             print(f"OpenAI API error: {e}")
             return "Error: Unable to generate text with OpenAI."

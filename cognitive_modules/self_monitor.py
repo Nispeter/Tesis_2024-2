@@ -12,16 +12,16 @@ class SelfMonitor:
     def update_summary(self, internal_state):
         """Updates the summary using the provided InternalState object."""
         self.internal_state = internal_state
-        #self.previous_summary = self.generate_new_summary()
+        self.previous_summary = self.generate_new_summary()
         
     def generate_new_summary(self):
         prompt = (
             f"Previous Summary:\n{self.internal_state.self_monitor_summary}\n\n"
             "Current State:\n"
             f"- Name: {self.internal_state.name}\n"
-            f"- Personality: {self.internal_state.personality}\n"
+            f"- Personality: {self.internal_state.description}\n"
             f"- Current Goal: {self.internal_state.current_goal}\n"
-            f"- Knowledge: {self.internal_state.knowledge}\n"
+            f"- Knowledge: {self.internal_state.retrieved_memories}\n"
             f"- Schedule: {self.internal_state.schedule}\n\n" + self_monitor_prompts["generate_summary"]
         )
 

@@ -14,7 +14,7 @@ from langchain_core.runnables import RunnablePassthrough
 from operator import itemgetter
 from utils.prompts import RAG_prompts
 
-
+#TODO: use openai from LLMCaller
 load_dotenv()
 embeddings = OpenAIEmbeddings(model="text-embedding-ada-002")
 vector_store = None
@@ -50,6 +50,35 @@ def load_pdf_documents(filepath):
         texts = [page.get_text() for page in doc]
     return "\n".join(texts)
 
+def save_embeddings(vector_store, file_path):
+    """
+    Save embeddings and metadata from FAISS vector store to a JSON file.
+    """
+    data = {
+        "embeddings": vector_store.serialize_index(),
+        "documents": [doc.dict() for doc in vector_store.documents],
+        "metadata": vector_store.metadata
+    }
+    with open(file_path, "w", encoding="utf-8") as f:
+        json.dump(data, f)
+    print(f"Embeddings saved to {file_path}")
+
+def load_embeddings(file_path):
+    """
+    Load embeddings and metadata from a JSON file into a FAISS vector store.
+    """
+    global vector_store
+    if not os.path.exists(file_path):
+        raise FileNotFoundError(f"No embeddings file found at {file_path}")
+
+    with open(file_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    vector_store = FAISS.deserialize_index(data["embeddings"])
+    vector_store.documents = [FAISS.Document(**doc) for doc in data["documents"]]
+    vector_store.metadata = data["metadata"]
+    print(f"Embeddings loaded from {file_path}")
+
 
 def get_session_log_filename():
     session_id = datetime.now().strftime("%Y%m%d_%H%M%S")  # Format: YYYYMMDD_HHMMSS
@@ -67,8 +96,16 @@ def add_new_data_to_kb(new_data, chunk_size=700, chunk_overlap=50):
             log_file.write(doc.page_content + "\n")
             log_file.write("=" * 40 + "\n")  
 
-def setup_retriever_and_qa(documents):
+def setup_retriever_and_qa(documents,save_path=None):
     global vector_store 
+    if save_path and os.path.exists(save_path):
+        print("Loading embeddings from file...")
+        load_embeddings(save_path)
+    else:
+        print("Generating new embeddings...")
+        vector_store = FAISS.from_documents(documents, embeddings)
+        if save_path:
+            save_embeddings(vector_store, save_path)
     vector_store = FAISS.from_documents(documents, embeddings)
     retriever = vector_store.as_retriever(search_kwargs={"k": 3}) 
     

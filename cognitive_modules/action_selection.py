@@ -15,9 +15,11 @@ class ActionSelection:
         self.speaking_policy_manager = speaking_policy_manager
         self.conversation_context = conversation_context
         self.llm_ollama_client = LLMCaller("ollama", "llama3.2:3b")
-        self.llm_openai_client = LLMCaller()
+        self.llm_openai_client = LLMCaller("openai", "gpt-4o-mini")
         
     def select_action(self, world_info):
+        if world_info is None:
+            world_info = "none relevant"
         context_summary = self.conversation_context.summarize_context()
         prompt = (
             f"The following is the current conversation context:\n"
@@ -29,7 +31,7 @@ class ActionSelection:
             f"Respond with only the action name."
         )
         try:
-            action = self.llm_ollama_client.generate_text(prompt).strip()
+            action = self.llm_openai_client.generate_text(prompt)
         except Exception as e:
             print(f"Error in LLM processing: {e}")
             action = "ignore"  
@@ -41,12 +43,35 @@ class ActionSelection:
             print(f"Invalid action returned by LLM: {action}. Defaulting to 'ignore'.")
             self.do_action("ignore", world_info)
     
+    #FIXME: Model never taking talk action
     def do_action(self, action, world_info):
         if action in valid_actions:
             if action == "move":
                 print("moving")
             elif action == "talk":
-                print("talking")
+                context_summary = self.conversation_context.summarize_context()
+                internal_state_summary = self.internal_state.summarize_states() 
+
+                prompt = (
+                    f"The character has the following internal state:\n"
+                    f"{internal_state_summary}\n\n"
+                    f"The current conversation context is:\n"
+                    f"{context_summary}\n\n"
+                    f"The world information is:\n"
+                    f"{world_info}\n\n"
+                    f"Based on this information, generate an appropriate response for the character to say."
+                )
+
+                try:
+                    # Use one of the LLM clients to generate the response
+                    print("generating response from: "+prompt)
+                    response = self.llm_openai_client.generate_text(prompt).strip()
+                    print(f"Generated response: {response}")
+                    # Optionally, you could store this response in the conversation context for continuity
+                except Exception as e:
+                    print(f"Error generating talk response: {e}")
+                    response = "..."  # Default response in case of failure
+                    
             elif action == "listen":
                 print("listening")
             elif action == "ignore":

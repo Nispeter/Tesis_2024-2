@@ -18,3 +18,15 @@ class InternalState:
         print(f"Retrieved Memories: {self.retrieved_memories}")
         print(f"Self-Monitor Summary: {self.self_monitor_summary}")
         print("----------------------\n")
+        
+    def summarize_states(self):
+        return (
+            f"--- Internal State ---\n"
+            f"Name: {self.name}\n"
+            f"Description: {self.description}\n"
+            f"Current Goal: {self.current_goal}\n"
+            f"Schedule: {self.schedule}\n"
+            f"Retrieved Memories: {self.retrieved_memories}\n"
+            f"Self-Monitor Summary: {self.self_monitor_summary}\n"
+            f"----------------------"
+        )

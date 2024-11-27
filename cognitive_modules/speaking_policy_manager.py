@@ -26,15 +26,23 @@ class SpeakingPolicyManager:
         print(f"Classified Emotion: {classified_emotion}")
         self.pragmatic_analyst.update_context(input_text)
 
+    #TODO: make a function that aligns with SOLID
     def define_speaking_behavior(self):
         context = self.pragmatic_analyst.context_summary()
         behavior = context + "\n" + "Emotional State: " 
         emotional_state = self.emotional_module.emotional_state
+        emotions = ""
         for emotion, intensity in emotional_state.items():
             if intensity > 0:  
                 search_policy = f"{emotion}-{intensity}"
                 if search_policy in self.speaking_policies:
-                    behavior += self.speaking_policies[search_policy] + " "
+                    emotions += self.speaking_policies[search_policy] + " "
+                    
+        if emotions == "":
+            behavior += "neutral"
+        else:
+            behavior += emotions
+            
         return behavior.strip()
 
 #TODO: Implement a history system so it keeps track of the last 3-5 dialogues and its contexts.

@@ -7,6 +7,8 @@ from memory_modules.RAG_module import (
     get_rag_answer
 )
 
+#TODO: use openai from LLMCaller
+
 class LongTermMemory:
     def __init__(self):
         self.retriever, self.prompt, self.primary_qa_llm = self.initialize_system()
@@ -14,13 +16,13 @@ class LongTermMemory:
 
     def initialize_system(self):
         setup_openai_key()
-        documents = load_and_process_local_documents(r"ragtest/input/book.txt")
+        documents = load_and_process_local_documents(r"ragtest/input/book_fleeting.txt")        #TODO: make dinamyc reference to a folder
         return setup_retriever_and_qa(documents)
 
     def retrieve_memories(self, question):
         """Process a single RAG question and return the answer."""
         try:
-            print("rag_question: " + question)
+            #print("rag_question: " + question)
             return get_rag_answer(question, self.retriever, self.primary_qa_llm)
         except Exception as e:
             print(f"Error processing question: {e}")

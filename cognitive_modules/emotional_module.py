@@ -17,7 +17,7 @@ class EmotionalModule:
     MAX_EMOTION_INTENSITY = 3
 
     def __init__(self):
-        self.llm_client = LLMCaller(service="ollama", model_name="llama3.2:3b")
+        self.llm_client = LLMCaller("openai", "gpt-4o-mini")        #NOTE: llama3.2:3b is pretty bad at classifying emotions. It's not very accurate.
         print("Emotional Module initialized")
         
     def classify_emotion(self, question):
@@ -25,12 +25,11 @@ class EmotionalModule:
         Uses Ollama local model to classify the given question into one the 8 following emotions and none other.
         Expected emotions: anticipation, joy, trust, fear, surprise, sadness, disgust, anger, none.
         """
-        #ALERT: llama3.2:3b is pretty bad at classifying emotions. It's not very accurate.
-         
+        
         prompt = emotional_prompts["classification_query"] + question
         response = self.llm_client.generate_text(prompt)
-        self.update_emotional_state(response.strip().lower())
-        return response.strip().lower()
+        self.update_emotional_state(response.lower())
+        return response.lower()
     
     def update_emotional_state(self, emotion):
         """Updates the NPC's emotional state based on the classified emotion."""
