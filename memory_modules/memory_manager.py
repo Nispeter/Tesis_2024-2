@@ -8,13 +8,15 @@ class MemoryManager():
         self.short_term_memory = ShortTermMemory(self.long_term_memory)
         self.internal_state = internal_state
         internal_state.description += ' ' + self.get_character(internal_state.name)
-        print("Memory Manager initialized, missing features")
+        print("Memory Manager initialized")
         
     def recall(self, prompt):
         distant_memories = self.long_term_memory.retrieve_memories(prompt)
+        print("long term memories related: " + distant_memories)
         recent_memories = self.short_term_memory.retrieve_memories(prompt)
+        print("short term memories related: " + str(recent_memories))
 
-        distant_memories_str = "\n".join(distant_memories)
+        distant_memories_str = distant_memories
         recent_memories_str = "\n".join([memory[0] if isinstance(memory, tuple) else memory for memory in recent_memories])
 
         self.short_term_memory.add_memory("the player says: " + prompt)

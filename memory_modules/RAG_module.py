@@ -96,22 +96,26 @@ def add_new_data_to_kb(new_data, chunk_size=700, chunk_overlap=50):
             log_file.write(doc.page_content + "\n")
             log_file.write("=" * 40 + "\n")  
 
-def setup_retriever_and_qa(documents,save_path=None):
-    global vector_store 
-    if save_path and os.path.exists(save_path):
+def setup_retriever_and_qa(documents, save_path=None):
+    """
+    Configura el sistema de recuperación de información y el modelo de QA.
+    """
+    global vector_store
+    embeddings = OpenAIEmbeddings()  
+
+    if save_path and os.path.exists(f"{save_path}/index.faiss"):
         print("Loading embeddings from file...")
-        load_embeddings(save_path)
+        vector_store = FAISS.load_local(save_path, embeddings, allow_dangerous_deserialization=True)
     else:
         print("Generating new embeddings...")
         vector_store = FAISS.from_documents(documents, embeddings)
         if save_path:
-            save_embeddings(vector_store, save_path)
-    vector_store = FAISS.from_documents(documents, embeddings)
-    retriever = vector_store.as_retriever(search_kwargs={"k": 3}) 
-    
+            vector_store.save_local(save_path)
+
+    retriever = vector_store.as_retriever(search_kwargs={"k": 3})
     prompt = ChatPromptTemplate.from_template(RAG_prompts["context_query"])
-    
     primary_qa_llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0)
+
     return retriever, prompt, primary_qa_llm
 
 template = RAG_prompts["context_query"]

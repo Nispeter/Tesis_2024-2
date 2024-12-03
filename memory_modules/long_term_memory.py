@@ -17,7 +17,7 @@ class LongTermMemory:
     def initialize_system(self):
         setup_openai_key()
         documents = load_and_process_local_documents(r"ragtest/input/book_fleeting.txt")        #TODO: make dinamyc reference to a folder
-        return setup_retriever_and_qa(documents)
+        return setup_retriever_and_qa(documents, "data/embeddings")
 
     def retrieve_memories(self, question):
         """Process a single RAG question and return the answer."""
