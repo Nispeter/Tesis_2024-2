@@ -2,9 +2,9 @@ from utils.LLM_caller import LLMCaller
 
 
 class PragmaticAnalyst:
-    def __init__(self):
+    def __init__(self, conversation_context):
         self.llm_client = LLMCaller(service="ollama", model_name="llama3.2:3b")
-        self.conversation_context = ConversationContext()
+        self.conversation_context = conversation_context
 
     def analyze_pragmatic_attributes(self, dialogue):
         """

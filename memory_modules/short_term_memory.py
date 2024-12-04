@@ -5,11 +5,12 @@ import ollama
 from utils.LLM_caller import LLMCaller
 
 class ShortTermMemory:
-    def __init__(self, long_term_memory=None, memory_size=5, forget_threshold=0.75, retrieval_threshold=3):
+    def __init__(self, long_term_memory=None, memory_size=5, forget_threshold=0.75, similarity_threshold=0.4, top_k = 3):
         self.memory = []  
         self.memory_size = memory_size
         self.forget_threshold = forget_threshold
-        self.retrieval_threshold = retrieval_threshold
+        self.similarity_threshold = similarity_threshold
+        self.top_k = top_k
         self.model = SentenceTransformer('all-MiniLM-L6-v2')
         self.long_term_memory = long_term_memory
         self.llm_client = LLMCaller("openai", "gpt-4o-mini")
@@ -65,7 +66,7 @@ class ShortTermMemory:
         texts = [text for text, _, _ in self.memory]
         return " ".join(texts) if texts else "No recent memories."
 
-    def retrieve_memories(self, query, top_k=3):
+    def retrieve_memories(self, query,similarity_threshold=0.4,  top_k=3):
         """
         Retrieves top_k memories most similar to the query and updates retrieval counts.
         """
@@ -74,12 +75,19 @@ class ShortTermMemory:
             (i, text, util.pytorch_cos_sim(query_embedding, emb).item())
             for i, (text, emb, _) in enumerate(self.memory)
         ]
-        similarities = sorted(similarities, key=lambda x: x[2], reverse=True)[:top_k]
-        for i, _, _ in similarities:
-            self.memory[i][2] += 1  # Incrementar contador de uso
+        relevant_memories = [
+            (i, text, score) for i, text, score in similarities if score >= similarity_threshold
+        ]
+
+        relevant_memories = sorted(relevant_memories, key=lambda x: x[2], reverse=True)[:top_k]
+
+        for i, _, _ in relevant_memories:
+            self.memory[i][2] += 1  
 
         self.check_and_store_long_term()
-        return [(text, score) for _, text, score in similarities]
+        return [(text, score) for _, text, score in relevant_memories]
+
+
 
     def check_and_store_long_term(self):
         """
@@ -90,7 +98,7 @@ class ShortTermMemory:
             return
 
         frequent_memories = [
-            (text, count) for text, _, count in self.memory if count >= self.retrieval_threshold
+            (text, count) for text, _, count in self.memory if count >= self.top_k
         ]
 
         if frequent_memories:
@@ -102,10 +110,14 @@ class ShortTermMemory:
             print("Storing in long-term memory:", summary)
             self.long_term_memory.add_data([summary])
 
-            # Reiniciar contador para los recuerdos promovidos
-            for i, (text, _, count) in enumerate(self.memory):
-                if text in texts:
-                    self.memory[i][2] = 0
+            self.memory = [
+                (text, emb, count)
+                for text, emb, count in self.memory
+                if text not in texts
+            ]
+            # for i, (text, _, count) in enumerate(self.memory):
+            #     if text in texts:
+            #         self.memory[i][2] = 0
 
     def summarize_memories(self, memories):
         """

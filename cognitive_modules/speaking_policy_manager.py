@@ -4,7 +4,7 @@ from cognitive_modules.emotional_module import EmotionalModule
 class SpeakingPolicyManager:
     def __init__(self, conversation_context):
         self.emotional_module = EmotionalModule()
-        self.pragmatic_analyst = PragmaticAnalyst()
+        self.pragmatic_analyst = PragmaticAnalyst(conversation_context)
         self.conversation_context = conversation_context
         
         self.speaking_policies = {

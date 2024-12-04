@@ -9,10 +9,10 @@ class SelfMonitor:
         self.llm_client = LLMCaller(service="groq", model_name="llama-3.1-8b-instant")
         print("Self Monitor initialized")
         
-    def update_summary(self, internal_state):
+    def update_summary(self):
         """Updates the summary using the provided InternalState object."""
-        self.internal_state = internal_state
         self.previous_summary = self.generate_new_summary()
+        self.internal_state.self_monitor_summary = self.previous_summary
         
     def generate_new_summary(self):
         prompt = (
@@ -29,7 +29,9 @@ class SelfMonitor:
         return new_summary
 
     def generate_text(self, prompt):
-        return self.llm_client.generate_text(prompt)
+        generated_summary = self.llm_client.generate_text(prompt)
+        print("Generated Summary: " + generated_summary)
+        return generated_summary
     
 
 # Example Usage
